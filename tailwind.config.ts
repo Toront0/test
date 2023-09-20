@@ -144,7 +144,11 @@ const config: Config = {
       "opac-p-14": "rgba(92,22,197,0.9)",
       "opac-p-15": "rgba(92,22,197,0.95)"
     },
-    extend: {}
+    extend: {
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit,minmax(10rem, 1fr))"
+      }
+    }
   },
   plugins: []
 };
