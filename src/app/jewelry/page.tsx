@@ -16,7 +16,7 @@ const page = () => {
             className="text-gray-4 group font-semibold dark:text-gray-12 flex items-center gap-1"
           >
             <HiOutlineArrowSmLeft className="text-2xl group-hover:-translate-x-1 transition-transform" />
-            <h3>Toys</h3>
+            <h3>Jewelry</h3>
           </Link>
           <button className="text-xl text-gray-7">
             <RiSearchLine className="w-full h-full" />
@@ -24,7 +24,7 @@ const page = () => {
         </div>
         <div className="grid grid-cols-fluid gap-4 mt-4">
           <ProductCard
-            href="toys/123"
+            href="jewelry/123"
             img={img}
             title="Snake Leather Bag"
             price={445}
@@ -32,7 +32,7 @@ const page = () => {
             sold={8411}
           />
           <ProductCard
-            href="toys/123"
+            href="jewelry/123"
             img={img}
             title="Snake Leather Bag"
             price={445}
@@ -40,7 +40,7 @@ const page = () => {
             sold={8411}
           />
           <ProductCard
-            href="toys/123"
+            href="jewelry/123"
             img={img}
             title="Snake Leather Bag"
             price={445}
@@ -48,7 +48,7 @@ const page = () => {
             sold={8411}
           />
           <ProductCard
-            href="toys/123"
+            href="jewelry/123"
             img={img}
             title="Snake Leather Bag"
             price={445}

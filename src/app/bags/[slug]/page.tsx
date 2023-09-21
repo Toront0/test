@@ -1,17 +1,16 @@
-import ProductDetailSlider from "@/components/ProductDetail/ProductDetailSlider";
-import React from "react";
-
-import img from "../../../public/s.png";
-
-import { PiHeartLight } from "react-icons/pi";
-import { BsStarHalf, BsHandbag } from "react-icons/bs";
-import { BiShoppingBag } from "react-icons/bi";
-import SizePicker from "@/components/ProductDetail/SizePicker";
 import ColorPicker from "@/components/ProductDetail/ColorPicker";
+import ProductDetailSlider from "@/components/ProductDetail/ProductDetailSlider";
 import Quantity from "@/components/ProductDetail/Quantity";
+import SizePicker from "@/components/ProductDetail/SizePicker";
 import Link from "next/link";
+import React from "react";
+import { BiShoppingBag } from "react-icons/bi";
+import { BsStarHalf } from "react-icons/bs";
+import { PiHeartLight } from "react-icons/pi";
 
-const layout = ({ children }: { children: React.ReactNode }) => {
+import img from "/public/s.png";
+
+const page = () => {
   return (
     <div className="w-full h-[calc(100%-56px)] max-w-[2000px] mx-auto">
       <div className="w-full h-full flex flex-col lg:flex-row">
@@ -94,4 +93,4 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default layout;
+export default page;

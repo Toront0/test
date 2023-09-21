@@ -71,165 +71,58 @@ const MostPopular = () => {
             All
           </Link>
           <Link
-            href="/"
+            href="/clothes"
             className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
           >
             Clothes
           </Link>
           <Link
-            href="/"
+            href="/shoes"
             className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
           >
             Shoes
           </Link>
           <Link
-            href="/"
+            href="/bags"
             className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
           >
             Bags
           </Link>
           <Link
-            href="/"
+            href="/electronics"
             className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
           >
             Electronics
           </Link>
           <Link
-            href="/"
+            href="/watch"
             className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
           >
             Watch
           </Link>
           <Link
-            href="/"
+            href="/jewelry"
             className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
           >
             Jewelry
           </Link>
           <Link
-            href="/"
+            href="/kitchen"
             className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
           >
             Kitchen
           </Link>
           <Link
-            href="/"
+            href="/toys"
             className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
           >
             Toys
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-12 dark:text-gray-4 select-none pointer-events-none px-5 py-1.5 rounded-full border-2 border-black dark:border-white bg-black dark:bg-white"
-          >
-            All
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Clothes
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Shoes
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Bags
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Electronics
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Watch
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Jewelry
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Kitchen
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Toys
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-12 dark:text-gray-4 select-none pointer-events-none px-5 py-1.5 rounded-full border-2 border-black dark:border-white bg-black dark:bg-white"
-          >
-            All
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Clothes
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Shoes
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Bags
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Electronics
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Watch
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Jewelry
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Kitchen
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-4 select-none pointer-events-none dark:text-gray-12 px-5 py-1.5 rounded-full border-2 border-gray-4"
-          >
-            Toys1
           </Link>
         </div>
       </div>
       <div className="mt-4 grid  grid-cols-fluid gap-y-4 gap-x-4">
         <ProductCard
+          href="123"
           img={img}
           title="Snake Leather Bag"
           price={445}
@@ -237,6 +130,7 @@ const MostPopular = () => {
           sold={8411}
         />
         <ProductCard
+          href="123"
           img={img}
           title="Snake Leather Bag"
           price={445}
@@ -244,6 +138,7 @@ const MostPopular = () => {
           sold={8411}
         />
         <ProductCard
+          href="123"
           img={img}
           title="Snake Leather Bag"
           price={445}
@@ -251,6 +146,7 @@ const MostPopular = () => {
           sold={8411}
         />
         <ProductCard
+          href="123"
           img={img}
           title="Snake Leather Bag"
           price={445}
@@ -258,6 +154,7 @@ const MostPopular = () => {
           sold={8411}
         />
         <ProductCard
+          href="123"
           img={img}
           title="Snake Leather Bag"
           price={445}
@@ -265,6 +162,7 @@ const MostPopular = () => {
           sold={8411}
         />
         <ProductCard
+          href="123"
           img={img}
           title="Snake Leather Bag"
           price={445}

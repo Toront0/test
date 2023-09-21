@@ -3,6 +3,7 @@
 import React from "react";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { PiHeartLight } from "react-icons/pi";
+import { BiLogInCircle } from "react-icons/bi";
 
 const Header = () => {
   const toggleTheme = () => {
@@ -12,13 +13,20 @@ const Header = () => {
   return (
     <div className="flex bg-[#fafafa] dark:bg-body-dark items-center justify-between px-4 py-2">
       <div className="flex items-center gap-2">
-        <div className="w-10 h-10 rounded-full bg-gray-12 dark:bg-gray-4"></div>
-        <div className="flex flex-col">
-          <span className="text-xs text-gray-7">Good morning</span>
-          <h2 className="text-sm font-medium text-gray-4 dark:text-gray-12">
-            Andrew Ainsley
-          </h2>
-        </div>
+        <button className="flex items-center gap-2 text-sm font-medium text-gray-4 dark:text-gray-12">
+          <BiLogInCircle className="text-2xl" />
+          <span>Войти</span>
+        </button>
+
+        {/* <>
+          <div className="w-10 h-10 rounded-full bg-gray-12 dark:bg-gray-4"></div>
+          <div className="flex flex-col">
+            <span className="text-xs text-gray-7">Good morning</span>
+            <h2 className="text-sm font-medium text-gray-4 dark:text-gray-12">
+              Andrew Ainsley
+            </h2>
+          </div>
+        </> */}
       </div>
       <div className="flex items-center gap-3">
         <div className="flex items-center mr-2">
