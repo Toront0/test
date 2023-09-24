@@ -23,7 +23,7 @@ export type Product = {
 };
 
 const getData = async () => {
-  const res = await fetch("https://test-phi-eight.vercel.app/api/products", {
+  const res = await fetch("/api/products", {
     headers: {
       "Content-Type": "application/json"
     }

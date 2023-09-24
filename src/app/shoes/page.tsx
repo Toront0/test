@@ -8,14 +8,11 @@ import Pagination from "@/components/Pagination";
 import { Product } from "../page";
 
 const getData = async () => {
-  const res = await fetch(
-    "https://test-phi-eight.vercel.app/api/products/shoes",
-    {
-      headers: {
-        "Content-Type": "application/json"
-      }
+  const res = await fetch("/api/products/shoes", {
+    headers: {
+      "Content-Type": "application/json"
     }
-  );
+  });
 
   const data = await res.json();
 
