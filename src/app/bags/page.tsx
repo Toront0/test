@@ -8,11 +8,14 @@ import img from "/public/s.png";
 import { Product } from "../page";
 
 const getData = async () => {
-  const res = await fetch("/api/products/bags", {
-    headers: {
-      "Content-Type": "application/json"
+  const res = await fetch(
+    "https://test-ginng81y7-toront0.vercel.app/api/products/bags",
+    {
+      headers: {
+        "Content-Type": "application/json"
+      }
     }
-  });
+  );
 
   const data = await res.json();
 

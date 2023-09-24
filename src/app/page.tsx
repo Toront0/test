@@ -23,11 +23,14 @@ export type Product = {
 };
 
 const getData = async () => {
-  const res = await fetch("/api/products", {
-    headers: {
-      "Content-Type": "application/json"
+  const res = await fetch(
+    "https://test-ginng81y7-toront0.vercel.app/api/products",
+    {
+      headers: {
+        "Content-Type": "application/json"
+      }
     }
-  });
+  );
 
   const data = await res.json();
 
