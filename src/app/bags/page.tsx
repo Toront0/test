@@ -9,7 +9,7 @@ import { Product } from "../page";
 
 const getData = async () => {
   const res = await fetch(
-    "https://test-ginng81y7-toront0.vercel.app/api/products/bags",
+    `https://${window.location.hostname}/api/products/bags`,
     {
       headers: {
         "Content-Type": "application/json"
