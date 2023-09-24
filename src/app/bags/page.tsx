@@ -8,11 +8,14 @@ import img from "/public/s.png";
 import { Product } from "../page";
 
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/products/bags", {
-    headers: {
-      "Content-Type": "application/json"
+  const res = await fetch(
+    "https://test-phi-eight.vercel.app/api/products/bags",
+    {
+      headers: {
+        "Content-Type": "application/json"
+      }
     }
-  });
+  );
 
   const data = await res.json();
 
