@@ -146,7 +146,10 @@ const config: Config = {
     },
     extend: {
       gridTemplateColumns: {
-        fluid: "repeat(auto-fit,minmax(10rem, 1fr))"
+        fluid: "repeat(auto-fit,minmax(20rem, 1fr))"
+      },
+      screens: {
+        xs: "400px"
       }
     }
   },

@@ -22,7 +22,7 @@ const page = () => {
             <RiSearchLine className="w-full h-full" />
           </button>
         </div>
-        <div className="grid grid-cols-fluid gap-4 mt-4">
+        {/* <div className="grid grid-cols-fluid gap-4 mt-4">
           <ProductCard
             href="jewelry/123"
             img={img}
@@ -55,7 +55,7 @@ const page = () => {
             rating={4.5}
             sold={8411}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

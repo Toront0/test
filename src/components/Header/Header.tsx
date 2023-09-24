@@ -2,8 +2,9 @@
 
 import React from "react";
 import { IoIosNotificationsOutline } from "react-icons/io";
-import { PiHeartLight } from "react-icons/pi";
+import { PiHeartLight, PiHandbagLight } from "react-icons/pi";
 import { BiLogInCircle } from "react-icons/bi";
+import Link from "next/link";
 
 const Header = () => {
   const toggleTheme = () => {
@@ -11,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex bg-[#fafafa] dark:bg-body-dark items-center justify-between px-4 py-2">
+    <div className="flex bg-[#fafafa] h-12 dark:bg-body-dark items-center justify-between px-4 py-2">
       <div className="flex items-center gap-2">
         <button className="flex items-center gap-2 text-sm font-medium text-gray-4 dark:text-gray-12">
           <BiLogInCircle className="text-2xl" />
@@ -47,6 +48,14 @@ const Header = () => {
             <PiHeartLight className="w-full h-full" />
           </div>
         </button>
+        <Link
+          href="/cart"
+          className="w-8 h-8 rounded-full flex items-center justify-center text-gray-4 dark:text-gray-12 hover:bg-opac-b-1 dark:hover:bg-opac-w-1"
+        >
+          <div className="w-6 h-6">
+            <PiHandbagLight className="w-full h-full" />
+          </div>
+        </Link>
       </div>
     </div>
   );

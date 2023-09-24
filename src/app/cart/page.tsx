@@ -1,3 +1,5 @@
+"use client";
+
 import CartProduct from "@/components/Cart/CartProduct";
 import Link from "next/link";
 import React from "react";
@@ -6,8 +8,11 @@ import { RiSearchLine } from "react-icons/ri";
 
 import img from "../../../public/s.png";
 import { HiArrowSmRight } from "react-icons/hi";
+import { useCartState } from "@/store/store";
 
-const page = () => {
+const Cart = () => {
+  const cartState = useCartState();
+
   return (
     <div className="pt-2 w-full flex flex-col h-[calc(100%-56px)] overflow-hidden bg-[#fafafa] dark:bg-body-dark">
       <div className="px-4 h-full overflow-y-auto">
@@ -24,66 +29,19 @@ const page = () => {
           </button>
         </div>
         <main className="mt-4 flex flex-col gap-4">
-          <CartProduct
-            id={1}
-            added_at={new Date()}
-            title="Werolla Cardigans"
-            size="M"
-            color="#f00"
-            price={385}
-            img={img}
-            amount={1}
-          />
-          <CartProduct
-            id={1}
-            added_at={new Date()}
-            title="Werolla Cardigans"
-            size="M"
-            color="#f00"
-            price={385}
-            img={img}
-            amount={1}
-          />
-          <CartProduct
-            id={1}
-            added_at={new Date()}
-            title="Werolla Cardigans"
-            size="M"
-            color="#f00"
-            price={385}
-            img={img}
-            amount={1}
-          />
-          <CartProduct
-            id={1}
-            added_at={new Date()}
-            title="Werolla Cardigans"
-            size="M"
-            color="#f00"
-            price={385}
-            img={img}
-            amount={1}
-          />
-          <CartProduct
-            id={1}
-            added_at={new Date()}
-            title="Werolla Cardigans"
-            size="M"
-            color="#f00"
-            price={385}
-            img={img}
-            amount={1}
-          />
-          <CartProduct
-            id={1}
-            added_at={new Date()}
-            title="Werolla Cardigans"
-            size="M"
-            color="#f00"
-            price={385}
-            img={img}
-            amount={1}
-          />
+          {cartState.items.map((c) => (
+            <CartProduct
+              key={c.id}
+              id={c.id}
+              added_at={c.added_at}
+              title={c.title}
+              size={c.size}
+              color={c.color}
+              price={c.price}
+              img={c.img}
+              amount={c.amount}
+            />
+          ))}
         </main>
       </div>
 
@@ -103,4 +61,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Cart;

@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 
 interface IProductDetailSlider {
-  imgs: StaticImageData[];
+  imgs: string[];
   alt: string[];
 }
 
@@ -36,7 +36,6 @@ const ProductDetailSlider = ({ imgs, alt }: IProductDetailSlider) => {
       console.log("swipe", isLeftSwipe ? "left" : "right");
       isLeftSwipe ? moveRight() : moveLeft();
     }
-    // add your conditional logic here
   };
 
   const moveRight = () => {
@@ -62,12 +61,11 @@ const ProductDetailSlider = ({ imgs, alt }: IProductDetailSlider) => {
     }
   };
 
-  console.log(touchStart);
-  console.log(touchEnd);
+  console.log(pos);
 
   return (
-    <div className="w-full bg-white lg:w-1/2 lg:h-full h-fit  md:h-1/2">
-      <div className="w-full    h-full relative  flex items-center justify-center bg-[#fafafa] dark:bg-body-dark">
+    <div className="w-full lg:w-1/2 lg:h-full h-2/3  md:h-1/2">
+      <div className="w-full h-full relative  flex items-center justify-center bg-gray-14 dark:bg-body-dark">
         <button
           onClick={moveLeft}
           className="absolute w-10 z-10 active:scale-95 h-10 top-1/2 -translate-y-1/2 left-4 rounded-full bg-opac-b-2 dark:bg-opac-w-2 border border-opac-b-1 dark:border-opac-w-1 text-gray-6 dark:text-gray-12 flex items-center justify-center text-2xl"
@@ -80,30 +78,26 @@ const ProductDetailSlider = ({ imgs, alt }: IProductDetailSlider) => {
         >
           <MdKeyboardArrowLeft className="rotate-180" />
         </button>
-        <div className="w-full h-full relative overflow-hidden   ">
+        <div className="w-full h-full relative overflow-hidden  flex justify-center ">
           <div
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
             onTouchMove={onTouchMove}
             ref={windowRef as React.RefObject<HTMLDivElement>}
             style={{ transform: `translateX(-${pos}px)` }}
-            className="w-full h-full relative transition-transform flex"
+            className="w-full h-full relative  transition-transform flex"
           >
             {imgs.map((s, i) => (
               <div
                 key={i}
                 className="min-w-full h-full relative flx items-center justify-center"
               >
-                <Image
-                  src={s}
-                  alt={alt[0]}
-                  className="object-contain w-full h-full"
-                />
+                <Image src={s} alt={alt[0]} className="object-cover" fill />
               </div>
             ))}
           </div>
         </div>
-        <div className="flex w-full  justify-center absolute left-1/2 gap-2  -translate-x-1/2 bottom-2">
+        <div className="flex w-full z-20 items-center   justify-center absolute left-1/2 gap-2  -translate-x-1/2 bottom-2">
           {imgs.map((d, i) => (
             <div
               key={i}

@@ -14,7 +14,7 @@ const page = () => {
   return (
     <div className="w-full h-[calc(100%-56px)] max-w-[2000px] mx-auto">
       <div className="w-full h-full flex flex-col lg:flex-row">
-        <ProductDetailSlider imgs={[img]} alt={["123"]} />
+        {/* <ProductDetailSlider imgs={[img]} alt={["123"]} /> */}
         <div className="h-full w-full flex flex-col justify-between lg:w-1/2  ">
           <div className="p-4 bg-[#fafafa] w-full  overflow-y-auto dark:bg-body-dark h-fit ">
             <div className="pb-4">

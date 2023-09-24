@@ -10,6 +10,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .toggle {
@@ -45,4 +46,26 @@ body {
     var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
     calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
     var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
 }

@@ -3,17 +3,7 @@ import React from "react";
 
 import { PiTrashSimple } from "react-icons/pi";
 import Quantity from "../ProductDetail/Quantity";
-
-interface ICartProduct {
-  id: number;
-  added_at: Date;
-  img: StaticImageData;
-  title: string;
-  price: number;
-  amount: number;
-  color?: string;
-  size?: string;
-}
+import { CartItem } from "@/store/types";
 
 const CartProduct = ({
   id,
@@ -24,7 +14,7 @@ const CartProduct = ({
   amount,
   color,
   size
-}: ICartProduct) => {
+}: CartItem) => {
   return (
     <div className="w-full rounded-lg shadow-sm flex items-center gap-4 bg-white dark:bg-black p-3">
       <div className="h-28 bg-[#fafafa] dark:bg-gray-2 aspect-square rounded-lg">

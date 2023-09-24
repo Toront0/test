@@ -4,12 +4,28 @@ import React from "react";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { RiSearchLine } from "react-icons/ri";
 
-import img from "/public/s.png";
+import Pagination from "@/components/Pagination";
+import { Product } from "../page";
 
-const page = () => {
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/products/shoes", {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+
+  const data = await res.json();
+
+  return data;
+};
+
+const page = async () => {
+  const data = (await getData()) as Product[];
+
   return (
-    <div>
-      <div className="px-4 mt-4">
+    <div className="relative h-[calc(100%-48px)] overflow-y-auto">
+      {/* <Toaster /> */}
+      <div className="p-4 mt-4">
         <div className="flex px-2 items-center justify-between">
           <Link
             href="/"
@@ -22,40 +38,18 @@ const page = () => {
             <RiSearchLine className="w-full h-full" />
           </button>
         </div>
-        <div className="grid grid-cols-fluid gap-4 mt-4">
-          <ProductCard
-            href="shoes/123"
-            img={img}
-            title="Snake Leather Bag"
-            price={445}
-            rating={4.5}
-            sold={8411}
-          />
-          <ProductCard
-            href="shoes/123"
-            img={img}
-            title="Snake Leather Bag"
-            price={445}
-            rating={4.5}
-            sold={8411}
-          />
-          <ProductCard
-            href="shoes/123"
-            img={img}
-            title="Snake Leather Bag"
-            price={445}
-            rating={4.5}
-            sold={8411}
-          />
-          <ProductCard
-            href="shoes/123"
-            img={img}
-            title="Snake Leather Bag"
-            price={445}
-            rating={4.5}
-            sold={8411}
-          />
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-fluid gap-y-8 gap-x-4 mt-4 max-w-[2000px] mx-auto">
+          {data.map((p) => (
+            <ProductCard
+              key={p.id}
+              href={`/shoes/${p.id}`}
+              img={p.imgs[0]}
+              title={p.title}
+              price={p.price}
+            />
+          ))}
         </div>
+        <Pagination totalItems={49} />
       </div>
     </div>
   );

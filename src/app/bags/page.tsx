@@ -5,8 +5,23 @@ import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { RiSearchLine } from "react-icons/ri";
 
 import img from "/public/s.png";
+import { Product } from "../page";
 
-const page = () => {
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/products/bags", {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+
+  const data = await res.json();
+
+  return data;
+};
+
+const page = async () => {
+  const data = (await getData()) as Product[];
+
   return (
     <div>
       <div className="px-4 mt-4">
@@ -23,38 +38,15 @@ const page = () => {
           </button>
         </div>
         <div className="grid grid-cols-fluid gap-4 mt-4">
-          <ProductCard
-            href="bags/123"
-            img={img}
-            title="Snake Leather Bag"
-            price={445}
-            rating={4.5}
-            sold={8411}
-          />
-          <ProductCard
-            href="bags/123"
-            img={img}
-            title="Snake Leather Bag"
-            price={445}
-            rating={4.5}
-            sold={8411}
-          />
-          <ProductCard
-            href="bags/123"
-            img={img}
-            title="Snake Leather Bag"
-            price={445}
-            rating={4.5}
-            sold={8411}
-          />
-          <ProductCard
-            href="bags/123"
-            img={img}
-            title="Snake Leather Bag"
-            price={445}
-            rating={4.5}
-            sold={8411}
-          />
+          {data.map((p) => (
+            <ProductCard
+              key={p.id}
+              href={String(p.id)}
+              img={p.imgs[0]}
+              title={p.title}
+              price={p.price}
+            />
+          ))}
         </div>
       </div>
     </div>
