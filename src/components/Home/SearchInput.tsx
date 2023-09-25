@@ -27,7 +27,7 @@ const SearchInput = () => {
     if (debounced.length > 0) {
       const handler = async () => {
         const res = await fetch(
-          `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products/search?starts_with=${debounced}`
+          `https://test-phi-eight.vercel.app/api/products/search?starts_with=${debounced}`
         );
 
         const data = await res.json();
