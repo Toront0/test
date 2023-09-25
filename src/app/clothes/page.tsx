@@ -7,6 +7,7 @@ import { RiSearchLine } from "react-icons/ri";
 import img from "/public/s.png";
 import { PrismaClient } from "@prisma/client";
 import { Product } from "../page";
+import { db } from "../lib/db";
 
 const prisma = new PrismaClient();
 
@@ -22,7 +23,11 @@ const getData = async () => {
 };
 
 const page = async () => {
-  const data = (await getData()) as Product[];
+  const data = await db.product.findMany({
+    where: {
+      category: "clothes"
+    }
+  });
   // const data = await getData();
 
   return (
