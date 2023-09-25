@@ -6,9 +6,15 @@ import { RiSearchLine } from "react-icons/ri";
 
 import { Product } from "../page";
 
+const protocol = typeof window === "undefined" ? "http://" : "https://";
+
 const getData = async () => {
+  console.log(
+    `${protocol}${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products/bags`
+  );
+
   const res = await fetch(
-    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products/bags`,
+    `${protocol}${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products/bags`,
     {
       headers: {
         "Content-Type": "application/json"
