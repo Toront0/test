@@ -5,6 +5,7 @@ import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { RiSearchLine } from "react-icons/ri";
 
 import { Product } from "../page";
+import { db } from "../lib/db";
 
 const protocol = typeof window === "undefined" ? "http://" : "https://";
 
@@ -28,7 +29,11 @@ const getData = async () => {
 };
 
 const page = async () => {
-  const data = (await getData()) as Product[];
+  const data = await db.product.findMany({
+    where: {
+      category: "bags"
+    }
+  });
 
   return (
     <div>

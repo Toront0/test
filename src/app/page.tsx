@@ -2,10 +2,11 @@ import CategoryIcons from "@/components/Home/CategoryIcons";
 import MostPopular from "@/components/Home/MostPopular";
 import SearchInput from "@/components/Home/SearchInput";
 import { useProducts } from "@/store/store";
+import { db } from "./lib/db";
 
 export type Product = {
   id: number;
-  created_at: Date;
+  createdAt: Date;
   title: string;
   price: number;
   brand: string;
@@ -29,9 +30,11 @@ const getData = async () => {
 };
 
 export default async function Home() {
-  const data = (await getData()) as Product[];
+  // const data = (await getData()) as Product[];
 
-  useProducts.setState({ products: data });
+  const res = await db.product.findMany();
+
+  useProducts.setState({ products: res });
 
   // const data = await res.json();
 

@@ -6,6 +6,7 @@ import { RiSearchLine } from "react-icons/ri";
 
 import Pagination from "@/components/Pagination";
 import { Product } from "../page";
+import { db } from "../lib/db";
 
 const getData = async () => {
   console.log(process.env.NEXT_PUBLIC_VERCEL_URL);
@@ -22,7 +23,11 @@ const getData = async () => {
 };
 
 const page = async () => {
-  const data = (await getData()) as Product[];
+  const data = await db.product.findMany({
+    where: {
+      category: "shoes"
+    }
+  });
 
   return (
     <div className="relative h-[calc(100%-48px)] overflow-y-auto">
