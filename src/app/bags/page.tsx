@@ -9,7 +9,7 @@ import { Product } from "../page";
 
 const getData = async () => {
   const res = await fetch(
-    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products/bags`,
+    `https://test-git-main-toront0.vercel.app/api/products/bags`,
     {
       headers: {
         "Content-Type": "application/json"

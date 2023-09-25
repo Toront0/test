@@ -11,7 +11,7 @@ const getData = async () => {
   console.log(process.env.NEXT_PUBLIC_VERCEL_URL);
 
   const res = await fetch(
-    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products/shoes`,
+    `https://test-git-main-toront0.vercel.app/api/products/shoes`,
     {
       headers: {
         "Content-Type": "application/json"

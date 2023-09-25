@@ -24,7 +24,7 @@ export type Product = {
 
 const getData = async () => {
   const res = await fetch(
-    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`,
+    `https://test-git-main-toront0.vercel.app/api/products`,
     {
       headers: {
         "Content-Type": "application/json"
