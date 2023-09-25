@@ -8,8 +8,10 @@ import Pagination from "@/components/Pagination";
 import { Product } from "../page";
 
 const getData = async () => {
+  console.log(process.env.NEXT_PUBLIC_VERCEL_URL);
+
   const res = await fetch(
-    `https://${window.location.hostname}/api/products/shoes`,
+    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products/shoes`,
     {
       headers: {
         "Content-Type": "application/json"
