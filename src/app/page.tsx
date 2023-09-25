@@ -1,12 +1,6 @@
 import CategoryIcons from "@/components/Home/CategoryIcons";
 import MostPopular from "@/components/Home/MostPopular";
 import SearchInput from "@/components/Home/SearchInput";
-import { useRef } from "react";
-
-import { StaticImageData } from "next/image";
-import Header from "@/components/Header/Header";
-import Tabs from "@/components/Home/Tabs";
-import FilterButton from "@/components/FilterButton/FilterButton";
 import { useProducts } from "@/store/store";
 
 export type Product = {
@@ -24,7 +18,7 @@ export type Product = {
 
 const getData = async () => {
   const res = await fetch(
-    `https://test-git-main-toront0.vercel.app/api/products`,
+    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`,
     {
       headers: {
         "Content-Type": "application/json"

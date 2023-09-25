@@ -4,12 +4,11 @@ import React from "react";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { RiSearchLine } from "react-icons/ri";
 
-import img from "/public/s.png";
 import { Product } from "../page";
 
 const getData = async () => {
   const res = await fetch(
-    `https://test-git-main-toront0.vercel.app/api/products/bags`,
+    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products/bags`,
     {
       headers: {
         "Content-Type": "application/json"
